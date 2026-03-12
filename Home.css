@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #fcfcfd;
+    overflow-x: hidden;
+    color: #333;
+}
+
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Premium Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1254d3, #0a3a99);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1254d3;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1254d3;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #1254d3;
+}
+
+.nav-right {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0px;
+}
+
+.auth-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1254d3;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.auth-link:hover {
+    background: rgba(18, 84, 211, 0.08);
+}
+
+.auth-link:last-child {
+    background: #1254d3;
+    color: white;
+    box-shadow: 0 4px 15px rgba(18, 84, 211, 0.3);
+}
+
+.auth-link:last-child:hover {
+    background: #0a3a99;
+    box-shadow: 0 6px 20px rgba(10, 58, 153, 0.4);
+    transform: translateY(-2px);
+}
+
+.divider {
+    display: none;
+    /* Removed for cleaner look */
+}
+
+/* Hero Section */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    flex: 1;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-text .highlight {
+    color: #1254d3;
+    background: linear-gradient(135deg, #1254d3, #0a3a99);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    background: #1254d3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(18, 84, 211, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0a3a99;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(10, 58, 153, 0.4);
+}
+
+.btn-secondary {
+    padding: 15px 30px;
+    background: transparent;
+    color: #1254d3;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid #1254d3;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(18, 84, 211, 0.05);
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.animated-hero-image {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+}
